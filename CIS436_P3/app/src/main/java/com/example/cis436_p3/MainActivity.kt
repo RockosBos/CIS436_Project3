@@ -22,13 +22,11 @@ class MainActivity : AppCompatActivity() {
                     .commitNow()
         }
 
-        var re = ""
         val queue = Volley.newRequestQueue(this)
-        val url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=45b395353ec56f36cab53022d51d87ff"
-
-        val stringRequest = StringRequest(Request.Method.GET, url, Response.Listener<String> { response ->
-            re = response
-            Log.d("JSONRESPONSE", re)
+        val currUrl = "https://api.openweathermap.org/data/2.5/weather?id=4990512&appid=45b395353ec56f36cab53022d51d87ff"
+        val fourDayURL = "https://api.openweathermap.org/data/2.5/forecast?id=4990512&appid=45b395353ec56f36cab53022d51d87ff"
+        val stringRequestCurr = StringRequest(Request.Method.GET, currUrl, Response.Listener<String> { response ->
+            Log.d("JSONRESPONSECURR", response)
             val jsonObj = JSONObject(response)
             var weather = jsonObj.getJSONArray("weather")
             var currWeather = weather.getJSONObject(0)
@@ -40,8 +38,25 @@ class MainActivity : AppCompatActivity() {
             Log.d("JSON Info", "Main Weather: " + mainWeather)
             Log.d("JSON Info", "Description: " + desc)
         },
-        Response.ErrorListener {re = "Error!"})
+        Response.ErrorListener {Log.d("JSONRESPONSE","Error!")});
 
-        queue.add(stringRequest)
+        val stringRequestFiveDay = StringRequest(Request.Method.GET, fourDayURL, Response.Listener<String> { response ->
+            Log.d("JSONRESPONSE5DAY", response)
+            //val jsonObj = JSONObject(response)
+            //var weather = jsonObj.getJSONArray("weather")
+            //var currWeather = weather.getJSONObject(0)
+            //var id = currWeather.getInt("id")
+            //var mainWeather = currWeather.getString("main")
+            //var desc = currWeather.getString("description")
+
+            //Log.d("JSON Info", "ID: " + id)
+            //Log.d("JSON Info", "Main Weather: " + mainWeather)
+            //Log.d("JSON Info", "Description: " + desc)
+        },
+                Response.ErrorListener {Log.d("JSONRESPONSE","Error!")})
+
+
+        queue.add(stringRequestCurr)
+        queue.add(stringRequestFiveDay)
     }
 }
