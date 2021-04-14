@@ -17,12 +17,6 @@ app:layout_constraintEnd_toStartOf="@+id/forecast4"
 app:layout_constraintHorizontal_bias="0.5"
 app:layout_constraintStart_toEndOf="@+id/forecast2">
 
-<TextView
-    android:id="@+id/dayOfWeek3"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="DefaultDayText3" />
-
     <ImageView
         android:id="@+id/day3Image"
         android:layout_width="70dp"
@@ -51,12 +45,6 @@ app:layout_constraintBottom_toBottomOf="parent"
 app:layout_constraintEnd_toStartOf="@+id/forecast3"
 app:layout_constraintHorizontal_bias="0.5"
 app:layout_constraintStart_toEndOf="@+id/forecast1">
-
-<TextView
-    android:id="@+id/dayOfWeek2"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="DefaultDayText2" />
 
     <ImageView
         android:id="@+id/day2Image"
@@ -88,12 +76,6 @@ app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintHorizontal_bias="0.5"
 app:layout_constraintStart_toEndOf="@+id/forecast3">
 
-<TextView
-    android:id="@+id/dayOfWeek4"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="DefaultDayText4" />
-
     <ImageView
         android:id="@+id/day4Image"
         android:layout_width="70dp"
@@ -122,13 +104,6 @@ app:layout_constraintStart_toEndOf="@+id/forecast3">
         app:layout_constraintEnd_toStartOf="@+id/forecast2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/dayOfWeek1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DefaultDayText1"
-            android:textSize="14sp" />
 
         <ImageView
             android:id="@+id/day1Image"
