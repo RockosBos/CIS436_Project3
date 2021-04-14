@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
+    android:id="@+id/defaultLow"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
@@ -23,11 +23,11 @@ app:layout_constraintStart_toEndOf="@+id/forecast2">
     android:layout_height="wrap_content"
     android:text="DefaultDayText3" />
 
-<ImageView
-    android:id="@+id/day3Image"
-    android:layout_width="match_parent"
-    android:layout_height="65dp"
-    tools:src="@tools:sample/avatars" />
+    <ImageView
+        android:id="@+id/day3Image"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        tools:src="@tools:sample/avatars" />
 
 <TextView
     android:id="@+id/day3High"
@@ -58,11 +58,11 @@ app:layout_constraintStart_toEndOf="@+id/forecast1">
     android:layout_height="wrap_content"
     android:text="DefaultDayText2" />
 
-<ImageView
-    android:id="@+id/day2Image"
-    android:layout_width="match_parent"
-    android:layout_height="65dp"
-    tools:src="@tools:sample/avatars" />
+    <ImageView
+        android:id="@+id/day2Image"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        tools:src="@tools:sample/avatars" />
 
 <TextView
     android:id="@+id/day2High"
@@ -94,11 +94,11 @@ app:layout_constraintStart_toEndOf="@+id/forecast3">
     android:layout_height="wrap_content"
     android:text="DefaultDayText4" />
 
-<ImageView
-    android:id="@+id/day4Image"
-    android:layout_width="match_parent"
-    android:layout_height="65dp"
-    tools:src="@tools:sample/avatars" />
+    <ImageView
+        android:id="@+id/day4Image"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        tools:src="@tools:sample/avatars" />
 
 <TextView
     android:id="@+id/day4High"
@@ -151,8 +151,8 @@ app:layout_constraintStart_toEndOf="@+id/forecast3">
 
     <ImageView
         android:id="@+id/dayOfWeatherImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -169,7 +169,7 @@ app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toBottomOf="@+id/WeatherDayOf" />
 
 <TextView
-android:id="@+id/textView3"
+android:id="@+id/lowMain"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
 android:layout_marginTop="28dp"
