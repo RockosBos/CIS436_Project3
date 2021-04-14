@@ -41,9 +41,6 @@ class MainActivity : AppCompatActivity() {
         val fourDayURL = "https://api.openweathermap.org/data/2.5/forecast?id=4990512&appid=45b395353ec56f36cab53022d51d87ff"
         val stringRequestCurr = StringRequest(Request.Method.GET, currUrl, Response.Listener<String> { response ->
             Log.d("JSONRESPONSECURR", response)
-            val fahrenheitTemp:Double
-            val highFahrenheitTemp:Double
-            val lowFahrenheitTemp:Double
             val jsonObj = JSONObject(response)
             var weather = jsonObj.getJSONArray("weather")
             var currWeather = weather.getJSONObject(0)
@@ -81,11 +78,11 @@ class MainActivity : AppCompatActivity() {
                 mainWeatherImageView.setImageResource(R.drawable.fog)
             }
             val defaultWeather=findViewById<TextView>(R.id.WeatherDayOf)
-            defaultWeather.setText(temp.toString())
+            defaultWeather.setText(kelvinToFahrenheit(temp).toString().substring(0,5))
             val highWeather=findViewById<TextView>(R.id.defaultHigh)
-            highWeather.setText(highTemp.toString())
+            highWeather.setText(kelvinToFahrenheit(highTemp).toString().substring(0,5))
             val lowWeather=findViewById<TextView>(R.id.lowMain)
-            lowWeather.setText(lowTemp.toString())
+            lowWeather.setText(kelvinToFahrenheit(lowTemp).toString().substring(0,5))
             Log.d("JSON Info", "ID: " + id)
             Log.d("JSON Info", "Main Weather: " + mainWeather)
             Log.d("JSON Info", "Description: " + desc)
@@ -116,8 +113,8 @@ class MainActivity : AppCompatActivity() {
                         val day1high = findViewById<TextView>(R.id.day1High);
                         val day1low = findViewById<TextView>(R.id.day1Low);
 
-                        day1high.setText(highTemp.toString())
-                        day1low.setText(lowTemp.toString())
+                        day1high.setText(kelvinToFahrenheit(highTemp).toString().substring(0,5))
+                        day1low.setText(kelvinToFahrenheit(lowTemp).toString().substring(0,5))
 
                         when(weather) {
                             "Clouds"-> day1image.setImageResource(R.drawable.cloud)
@@ -134,8 +131,8 @@ class MainActivity : AppCompatActivity() {
                         val day2high = findViewById<TextView>(R.id.day2High);
                         val day2low = findViewById<TextView>(R.id.day2Low);
 
-                        day2high.setText(highTemp.toString())
-                        day2low.setText(lowTemp.toString())
+                        day2high.setText(kelvinToFahrenheit(highTemp).toString().substring(0,5))
+                        day2low.setText(kelvinToFahrenheit(lowTemp).toString().substring(0,5))
 
                         when(weather) {
                             "Clouds"-> day2image.setImageResource(R.drawable.cloud)
@@ -152,8 +149,8 @@ class MainActivity : AppCompatActivity() {
                         val day3high = findViewById<TextView>(R.id.day3High);
                         val day3low = findViewById<TextView>(R.id.day3Low);
 
-                        day3high.setText(highTemp.toString())
-                        day3low.setText(lowTemp.toString())
+                        day3high.setText(kelvinToFahrenheit(highTemp).toString().substring(0,5))
+                        day3low.setText(kelvinToFahrenheit(lowTemp).toString().substring(0,5))
 
                         when(weather) {
                             "Clouds"-> day3image.setImageResource(R.drawable.cloud)
@@ -170,8 +167,8 @@ class MainActivity : AppCompatActivity() {
                         val day4high = findViewById<TextView>(R.id.day4High);
                         val day4low = findViewById<TextView>(R.id.day4Low);
 
-                        day4high.setText(highTemp.toString())
-                        day4low.setText(lowTemp.toString())
+                        day4high.setText(kelvinToFahrenheit(highTemp).toString().substring(0,5))
+                        day4low.setText(kelvinToFahrenheit(lowTemp).toString().substring(0,5))
 
                         when(weather) {
                             "Clouds"-> day4image.setImageResource(R.drawable.cloud)
@@ -193,4 +190,10 @@ class MainActivity : AppCompatActivity() {
         queue.add(stringRequestCurr)
         queue.add(stringRequestFiveDay)
     }
+    fun kelvinToFahrenheit(temp:Double):Double{
+        val kelvin:Double
+        kelvin=1.8*(temp-273)+32
+        return kelvin
+    }
+
 }
