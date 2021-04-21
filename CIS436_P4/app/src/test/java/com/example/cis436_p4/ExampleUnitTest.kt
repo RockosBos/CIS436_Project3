@@ -1,4 +1,4 @@
-package com.example.project_4
+package com.example.cis436_p4
 
 import org.junit.Test
 
