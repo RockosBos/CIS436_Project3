@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">CIS436_P4</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">Search</string>
+    <string name="tab_text_2">Saved Movies</string>
+    <string name="search_tab_text">Movie Search</string>
+    <string name="saved_tab_text">Saved Movies</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="movie_info_header">Movie Details</string>
+    <string name="title">Title</string>
+    <string name="year">Year</string>
+    <string name="rating">Rating</string>
 </resources>
