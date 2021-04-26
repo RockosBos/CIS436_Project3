@@ -1,0 +1,2 @@
+com/example/cis436_p4/BuildConfig.java
+ com.example.cis436_p4.BuildConfig
