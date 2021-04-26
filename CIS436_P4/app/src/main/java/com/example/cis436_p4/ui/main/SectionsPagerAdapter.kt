@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.cis436_p4.R
-import com.example.cis436_p4.SavedFragment
-import com.example.cis436_p4.SearchFragment
 
 private val TAB_TITLES = arrayOf(
         R.string.tab_text_1,
