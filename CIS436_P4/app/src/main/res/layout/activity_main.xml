@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CIS436_P4.AppBarOverlay">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/titleSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
