@@ -48,6 +48,10 @@
         "source": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_search.xml.flat",
+        "source": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\src\\main\\res\\layout\\fragment_search.xml"
+    },
+    {
         "merged": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -62,5 +66,9 @@
     {
         "merged": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_saved.xml.flat",
+        "source": "C:\\Users\\nkess\\Documents\\GitHub\\CIS436_Project3\\CIS436_P4\\app\\src\\main\\res\\layout\\fragment_saved.xml"
     }
 ]
