@@ -15,6 +15,9 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import org.json.JSONObject
 
 
@@ -28,21 +31,33 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+
+
         // api request variables
         val queue = Volley.newRequestQueue(this)
 
         fun getMovie(title: String) {
-            var splitString = title.split(" ").toTypedArray()
+            val textTitle:TextView?=findViewById(R.id.title) as? TextView
+            val textYear:TextView?=findViewById(R.id.year) as? TextView
+            val textRating:TextView?=findViewById(R.id.rating) as? TextView
+            val searchText:EditText?=findViewById(R.id.editTextTextPersonName2) as? EditText
+            val searchButton:Button?= findViewById<Button>(R.id.searchButton)
+            val splitString = title.split(" ").toTypedArray()
             val newTitle = splitString.joinToString("%20")
-
+            searchButton?.setOnClickListener {
+               //searchButton.setText("Hey")
+                val text1=searchText?.text.toString()
+                textTitle?.setText(text1)
+            }
             var url = "https://movie-database-imdb-alternative.p.rapidapi.com/?s=&page=1&r=json";
             url = url.substring(0, 58) + newTitle + url.substring(58, url.length)
             val keyHeader = "aca0de8833mshd95dc54b87093a2p17c456jsnfd0d32ee10eb";
             val hostHeader = "movie-database-imdb-alternative.p.rapidapi.com"
 
+
             val req = object :
                 StringRequest(Request.Method.GET, url, Response.Listener<String> { response ->
-                    val resp = response.toString()
+                     val resp = response.toString()
                     Log.i("JSONRESPONSE", resp);
 
                     // Gets json of search
@@ -56,7 +71,9 @@ class MainActivity : AppCompatActivity() {
                     val movieYear = firstMovie.getString("Year")
                     val movieType = firstMovie.getString("Type")
                     val moviePoster = firstMovie.getString("Poster")
-
+//                    textTitle?.setText(movieTitle).toString()
+//                    textYear?.setText(movieYear).toString()
+//                    textRating?.setText(moviePoster).toString()
                 }, Response.ErrorListener { Log.d("JSONRESPONSE", "Error!") }) {
                 override fun getHeaders(): MutableMap<String, String> {
                     val headers = HashMap<String, String>()
